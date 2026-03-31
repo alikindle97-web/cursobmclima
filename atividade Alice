@@ -1,0 +1,91 @@
+#Exercício 1
+#Organização:
+#dados
+notas <- c(8.5, 7.0, 9.2, 6.8, 8.0, 7.5, 9.0, 5.5, 8.8, 7.2)
+#Ordene as notas em ordem crescente.
+sort(notas)
+#Resultado: 5.5 6.8 7.0 7.2 7.5 8.0 8.5 8.8 9.0 9.2
+notas_crescente <- c( 5.5, 6.8, 7.0, 7.2, 7.5, 8.0, 8.5, 8.8, 9.0, 9.2)
+#Inverta a ordem das notas, mostrando-as da maior para a menor.
+rev(notas_crescente)
+#Resultado: 9.2 9.0 8.8 8.5 8.0 7.5 7.2 7.0 6.8 5.5
+#Estatísticas Descritivas:
+#Calcule a média das notas.
+mean(notas_crescente)
+#Resultado: 7.75
+#Encontre a mediana das notas.
+median(notas_crescente)
+#Resultado: 7.75
+#Determine a nota mais alta e a nota mais baixa.
+max(notas_crescente)
+#9.2
+min(notas_crescente)
+#5.5
+#Calcule o desvio padrão das notas.
+sd(notas_crescente)
+#Resultado: 1.168332
+#Frequência:
+#Crie uma tabela de frequências para mostrar quantas vezes cada nota aparece.
+table(notas_crescente)
+#Resultado:
+#5.5 6.8 7 7.2 7.5 8 8.5 8.8 9 9.2
+#1 1 1 1 1 1 1 1 1 1
+#Desafio Extra:
+#Crie um novo vetor chamado notas_arredondadas que contenha as notas arredondadas para uma casa
+decimal.
+notas_arredondadas <- round(notas, 1)
+print("Notas arredondadas para 1 casa decimal:")
+print(notas_arredondadas)
+#Resultado: 8.5 7.0 9.2 6.8 8.0 7.5 9.0 5.5 8.8 7.2
+#Calcule a média das notas arredondadas
+media_arredondada <- mean(notas_arredondadas)
+print(paste("Média das notas arredondadas:", round(media_arredondada, 2)))
+#Resultado: 7.75
+#EXERCÍCIO 2
+#Carregar o conjunto de dados:
+data(mtcars)
+#Explorar a estrutura dos dados
+str(mtcar)
+#Observe quantas linhas (observações) e colunas (variáveis) o data frame possui: linhas:32; colunas: 11
+#Obter informações básicas sobre as variáveis:
+summary(mtcars)
+#Identifique quais são as variáveis numéricas e quais são as variáveis categóricas.
+#Calcular estatísticas descritivas:
+mean(mtcars$mpg) #Resultado:20.09062
+median(mtcars$mpg) #Resultado: 19.2
+sd(mtcars$mpg) #Resultado: 6.026948
+min(mtcars$mpg) #Resultado: 10.4
+max(mtcars$mpg) #Resultado: 33.9
+#Ordenar os dados:
+sort(mtcars$hp) #Resultado: [1] 52 62 65 66 66 91 93 95 97 105 109 110 110 110 113 123 123 150
+150 175 175 175 180 180 180 205 215 230 245 30] 245 264 335
+rev(mtcars$hp)#Resultado: [1] 109 335 175 264 113 91 66 175 245 150 150 97 65 52 66 230 215 205
+180 180 180 123 123 95 62 245 105 175 110[30] 93 110 110
+#Criar uma sequência de números:
+#criar uma sequência de números de 1 a 10, com incrementos de 2.
+seq(1, 10, by = 2) #Resultado: 1 3 5 7 9
+#Crie outra sequência de números de 5 a 15, com incrementos de 3
+seq(5, 15, by = 3) #Resultado: 5 8 11 14
+#Repetir elementos
+#Utilize a função rep() para criar um vetor com o número 7 repetido 4 vezes.
+rep(7,4) #Resultado: 7 7 7 7
+#Crie outro vetor com a letra 'a' repetida 10 vezes.
+rep("a", 10) #Resultado: "a" "a" "a" "a" "a" "a" "a" "a" "a" "a"
+#Converter entre maiúsculas e minúsculas:
+28/03/2026, 15:42 Atividades R_1 - Posit Cloud
+https://posit.cloud/content/12179959 1/2
+#Selecione uma variável de texto, por exemplo, cyl (número de cilindros).
+toupper("cyl") #Resultado: CYL
+tolower("CYL") #Resultado: cyl
+#########################################################################################################
+#Instalação do pacote 'remotes'
+install.packages('remotes')
+library(remotes)
+remotes::install_github("rfsaldanha/microdatasus")
+force = TRUE
+install.packages('tidyverse')
+install.packages('readr')
+library(microdatasus)
+library(tidyverse)
+library(readr)
+url <- "https://github.com/bmclima/cursoRBasico/blob/main/docs/dados/stations.csv"
